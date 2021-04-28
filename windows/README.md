@@ -37,7 +37,11 @@ As argument, use the profile you used to save your config. As we used *Profile1*
 
 ![Create action](.src/action.jpeg).
 
-Now we can add the task to the batchfile. This is the command needed `C:\Windows\System32\schtasks.exe /RUN /TN YourFolderName\YourTaskName`. It is located in the second line of the batchfile. Note that you might need to modify your foldername and taskname. Here we used `Mining` and `MSIAfterburner`.
+Now we can add the task to the batchfile.
+
+    C:\Windows\System32\schtasks.exe /RUN /TN YourFolderName\YourTaskName
+    
+It is located in the second line of the batchfile. Note that you might need to modify your foldername and taskname. Here we used `Mining` and `MSIAfterburner`.
 
 You might want to test the command in a terminal to make sure you made no mistake. You should notice that MSI Afterburner is started with a specific profile active.
 
