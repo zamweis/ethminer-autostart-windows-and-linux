@@ -1,6 +1,6 @@
 ## Windows
 
-We are going to create a **batchfile** which automatically starts MSI Afterburner with **undervolting and overclocking on startup** of windows. This batchfile will make sure that ethminer will be restarted if crashed (connection lost, instable gpu settings). The batchfile can be found in this folder.
+We are going to create a **batchfile** which automatically starts MSI Afterburner with **undervolting and overclocking on startup** of windows. This batchfile will make sure that ethminer will be restarted if crashed (connection lost, instable gpu settings). The batchfile can be found in this directory.
 
 ### Ethminer
 
