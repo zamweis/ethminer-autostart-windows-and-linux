@@ -50,6 +50,8 @@ Simply press `windows+r`, enter `shell:startup` and hit enter. Alternatively you
 Copy the batchfile into the folder.
 You can enable and disable the batchfile and other programs at startup in **task manager** too.
 
+Some motherboards support a feature to autostart your system if your PSU got power. This would make your system restart mining even if you have a power failure.
+
 You might also want to have a copy on your Desktop in case you need to restart the batchfile. 
 
 And you're done...happy mining.
