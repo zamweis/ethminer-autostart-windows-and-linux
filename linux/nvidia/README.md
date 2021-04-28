@@ -25,7 +25,9 @@ Where **value** is the **Thermal design power (TDP)** of your gpu. In this examp
 
 This tool is used to modify your gpu's baseclock and memory clock.
 Install the program with you package manager.
-You need to open the program and define a new profile for your gpu (base clock and memory clock). Possible values for a RX 2070 super are: **Baseclock -150, Memoryclock +1000**. If your miner is **instable**, reduce the amout you overclock your gpu.
+You need to open the program and define a new profile for your gpu (base clock and memory clock). [Here](https://2miners.com/blog/how-to-overclock-nvidia-and-amd-graphics-cards-on-different-algorithms/) is a list of gpu settings.
+
+If your miner is **instable**, reduce the amout you overclock your gpu.
 
 Once you are done and the profile is activated, gwe should now automatically start with that profile.
 

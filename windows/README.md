@@ -13,10 +13,10 @@ You could also choose another location, just make sure to edit the corresponding
 ### MSI Afterburner
 
 Download and install [MSI Afterburner](https://www.msi.com/Landing/afterburner/graphics-cards).
-Then you have to lookup the right overlock and undervolt settings for your gpu and save those settings in a profile within MSI Afterburner.
+Then you have to lookup the right overlock and undervolt settings for your gpu and save those settings in a profile within MSI Afterburner. [Here](https://2miners.com/blog/how-to-overclock-nvidia-and-amd-graphics-cards-on-different-algorithms/) is a list of gpu settings.
 You have to remember in which profile slot you configured your card for later. Here we used **profile1**. Note that when you want to use your gpu (for gaming, ect), you might need to stop ethminer and reset your gpu settings.
 
-Here is an example of the **settings used for a RTX 2070 super**. Baseclock -150, MemoryClock +1000 (**lower this value if instable**), power consumption as low as possible (50%). You should get a reported hashrate around **42MH**.
+Here is an example of the **settings used for a RTX 2070 Super**. Baseclock -150, MemoryClock +1000 (**lower this value if instable**), power consumption as low as possible (50%). You should get a reported hashrate around **42MH**.
 
 ### Windows task
 
