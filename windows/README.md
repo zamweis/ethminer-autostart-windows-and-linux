@@ -8,7 +8,7 @@ First go to the ethminer github and download the latest [release](https://github
 Extract `ethminer.exe` and the `kernels` folder into `C:\Ethminer`.
 You could also choose another location, just make sure to edit the corresponding lines in the batchfile.
 
-Ethminer can also be added to [environment varibales](https://superuser.com/questions/284342/what-are-path-and-other-environment-variables-and-how-can-i-set-or-use-them), so that you can run it from anywhere in a terminal.
+(Optional) Ethminer can also be added to [environment varibales](https://superuser.com/questions/284342/what-are-path-and-other-environment-variables-and-how-can-i-set-or-use-them), so that you can run it from anywhere in a terminal.
 
 ### MSI Afterburner
 
