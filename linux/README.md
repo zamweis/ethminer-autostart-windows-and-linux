@@ -1,3 +1,3 @@
 ## Linux
 
-coming soon
+choose nvidia or amd
