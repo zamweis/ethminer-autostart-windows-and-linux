@@ -41,6 +41,7 @@ You might want to autologin into your system so that you only need to turn on yo
 To autostart the batchfile at login, you need to copy the batchfile to your windows startup folder.
 Simply press `windows+r`, enter `shell:startup` and hit enter. Alternatively you can open the folder through **task manager**.
 Copy the batchfile into the folder.
+You can enable and disable the batchfile and other programs at startup in **task manager** too.
 
 You might also want to have a copy on your Desktop in case you need to restart the batchfile. 
 
