@@ -39,6 +39,8 @@ As argument, use the profile you used to save your config. As we used *Profile1*
 
 Now we can add the task to the batchfile. This is the command needed `C:\Windows\System32\schtasks.exe /RUN /TN YourFolderName\YourTaskName`. It is located in the second line of the batchfile. Note that you might need to modify your foldername and taskname. Here we used `Mining` and `MSIAfterburner`.
 
+You might want to test the command in a terminal to make sure you made no mistake. You should notice that MSI Afterburner is started with a specific profile active.
+
 ## Autostart mining at login
 
 You might want to autologin into your system so that you only need to turn on your computer. Here is a [link](https://docs.microsoft.com/en-us/troubleshoot/windows-server/user-profiles-and-logon/turn-on-automatic-logon) how it can be done.
