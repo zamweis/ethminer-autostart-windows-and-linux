@@ -27,7 +27,7 @@ Create a new folder to save your task in the folder. Here we used the name `Mini
 
 ![Task Scheduler](.src/tasksch.jpeg).
 
-Next create a new task (not basic task). Name it whatever you want. Here we used the name `MSIAfterburner`. Make sure to check the checkbox labeled **Run with highest privileges** like shown.
+Next create a new task (not basic task). Here we used the name `MSIAfterburner`. You can choose a diffrent name, if so make sure to edit the corresponding lines in the batchfile. Make sure to check the checkbox labeled **Run with highest privileges** like shown.
 
 ![Create task](.src/createtask.jpeg).
 
