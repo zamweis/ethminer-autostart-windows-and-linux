@@ -11,8 +11,9 @@ Extract `ethminer.exe` and the `kernels` folder into `C:\Ethminer`.
 
 ### MSI Afterburner
 
-- [ ] TODO Add description
-- [ ] TODO Add profile description
+Download and install [MSI Afterburner](https://www.msi.com/Landing/afterburner/graphics-cards).
+Then you have to lookup the right overlock and undervolt settings for your card and create a profile with it in MSI Afterburner.
+You have to remember in which profile slot you configured your card for later.
 
 ### Windows tasks
 
@@ -20,4 +21,7 @@ Also copy `MSIAfterburnerResetDefault` and `MSIAfterburnerSetForMining` to `C:\E
 These are shortcuts to a task which we have to create in windows. This is needed to run MSI Afterburner in a batch script.
 
 - [ ] Add description on how to add task.
+
+## Linux
+
 
