@@ -1,9 +1,14 @@
 ## Windows
 
+We are going to create a **batchfile** which automatically starts MSI Afterburner with **undervolting and overclocking on startup** of windows. This batchfile will make sure that ethminer will be restarted if crashed (connection lost, instable gpu settings). The batchfile can be found in this folder.
+
 ### Ethminer
 
 First go to the ethminer github and download the latest [release](https://github.com/ethereum-mining/ethminer/releases).
 Extract `ethminer.exe` and the `kernels` folder into `C:\Ethminer`.
+You could also choose another location, just make sure to edit the corresponding lines in the batchfile.
+
+Ethminer can also be added to [environment varibales](https://superuser.com/questions/284342/what-are-path-and-other-environment-variables-and-how-can-i-set-or-use-them), so that you can run it from anywhere in a terminal.
 
 ### MSI Afterburner
 
@@ -15,7 +20,7 @@ Here is an example of the **settings used for a RTX 2070 super**. Baseclock -150
 
 ### Windows task
 
-We have do create a new task in windows so that we can execute MSI Afterburner with privileges. Else windows would always ask if you really want to open MSI Afterburner. This is very handy for the autostart of the batchfile.
+We have do create a new task in windows so that we can execute MSI Afterburner with privileges. Else windows would always ask if you really want to open MSI Afterburner. This will become very handy when starting MSI Afterburner through the batchfile.
 
 Open the windows programm **Task Scheduler**.
 Create a new folder to save your task in the folder. Here we used the name `Mining`.
