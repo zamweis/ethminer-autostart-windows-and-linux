@@ -37,7 +37,7 @@ Simply modify the script the way you want it (aka names, paths, ect). A template
 
     sudo chmod +x yourscript
 
-Unfortunately you still need to enter your password when you execute the script because nvidia-smi need admin privileges. A workaround is to modify your `/etc/sudoers.d`. [This](https://wiki.archlinux.org/index.php/sudo#Configure_sudo_using_drop-in_files_in_/etc/sudoers.d) lets you start nvidia-smi without need of your password. 
+Unfortunately you still need to enter your password when you execute the script because nvidia-smi need admin privileges. A [workaround](https://wiki.archlinux.org/index.php/sudo#Configure_sudo_using_drop-in_files_in_/etc/sudoers.d) is to modify your `/etc/sudoers.d`.
 
 ## Autostart the script
 
