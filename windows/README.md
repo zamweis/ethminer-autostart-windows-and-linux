@@ -1,6 +1,6 @@
 ## Windows
 
-We are going to create a **batchfile** which automatically starts MSI Afterburner with **undervolting and overclocking on startup** of windows. This batchfile will make sure that ethminer will be restarted if crashed (connection lost, instable gpu settings). The batchfile can be found in this directory.
+We are going to create a **batchfile** which automatically starts MSI Afterburner with **undervolting and overclocking on startup** of windows. This batchfile will make sure that ethminer will be restarted if crashed (connection lost, instable gpu settings). The batchfile can be found in this directory. Note that we take no responsibility if you damage your system. Proceed at your own risk.
 
 ### Ethminer
 
@@ -50,7 +50,11 @@ You might want to test the command in a terminal to make sure you made no mistak
 You might want to autologin into your system so that you only need to turn on your computer. Here is a [link](https://docs.microsoft.com/en-us/troubleshoot/windows-server/user-profiles-and-logon/turn-on-automatic-logon) how it can be done.
 
 To autostart the batchfile at login, you need to copy the batchfile to your windows startup folder.
-Simply press `windows+r`, enter `shell:startup` and hit enter. Alternatively you can open the folder through **task manager**.
+Simply press `windows+r`, enter 
+
+    shell:startup
+    
+and hit enter. Alternatively you can open the folder through **task manager**.
 Copy the batchfile into the folder.
 You can enable and disable the batchfile and other programs at startup in **task manager** too.
 
