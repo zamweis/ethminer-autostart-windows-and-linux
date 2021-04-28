@@ -22,7 +22,7 @@ This is a shortcut to a task which we have to create in windows. This is needed 
 
 Open the windows programm [Task Scheduler].
 Create a new folder to save your task in. Here we use the name "Mining".
-![Task Scheduler](https://gitlab.com/Snelfie/ethminer-autostart-windows-and-linux/-/blob/master/windows/.src/tasksch.jpeg?raw=true).
+![Task Scheduler](./windows/.src/tasksch.jpeg).
 
 - [ ] Add description on how to add task.
 
