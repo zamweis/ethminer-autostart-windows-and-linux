@@ -29,6 +29,8 @@ You need to open the program and define a new profile for your gpu (base clock a
 
 If your miner is **instable**, reduce the amout you overclock your gpu.
 
+Here is an example of the **settings used for a RTX 2070 Super**. Baseclock -150, MemoryClock +1000. You should get a reported hashrate around **42MH** and a power consumption around  (gpu only). 
+
 Once you are done and the profile is activated, gwe should now automatically start with that profile.
 
 ### The script
