@@ -1,91 +1,89 @@
 # Ethminer Autostart on Windows and Linux
 
-This repository provides a comprehensive guide and scripts to set up `ethminer` with autostart on both Windows and Linux systems. The guide includes configurations for both AMD and Nvidia GPUs, covering topics such as undervolting, overclocking, and automating the startup process. 
+This repository contains a comprehensive guide and scripts to set up `ethminer` with autostart functionality on both Windows and Linux systems. It includes instructions for configuring Nvidia and AMD GPUs, with separate scripts and configurations to enable smooth mining operations. 
 
-**Disclaimer**: We take no responsibility for any damage to your system. Use these scripts and configurations at your own risk.
+The repository is organized into subfolders and provides setup instructions specific to the platform (Windows/Linux) and GPU (Nvidia/AMD). Follow the sections below to navigate to the appropriate setup guide based on your configuration.
 
-## Table of Contents
+> **Disclaimer**: Use these scripts and configurations at your own risk. We take no responsibility for any damage to your hardware or software.
 
-1. [Overview](#overview)
-2. [Requirements](#requirements)
-3. [Installation and Setup](#installation-and-setup)
-   - [Windows](#windows)
-   - [Linux](#linux)
-4. [Configuration](#configuration)
-   - [GPU Settings](#gpu-settings)
-   - [Autostart and Automation](#autostart-and-automation)
-5. [Contributing](#contributing)
-6. [License](#license)
+## Repository Structure
 
-## Overview
+The repository is organized as follows:
 
-This repository provides detailed instructions and scripts for configuring `ethminer` to automatically start mining upon system boot. The setup includes scripts for Windows batch files and Linux bash scripts, targeting both Nvidia and AMD GPUs. 
+- **`/windows/`**: Contains scripts and instructions for setting up `ethminer` on Windows.
+  - `README.md`: Detailed guide for Windows setup.
+  - `mining.bat`: Batch file to configure and start mining on Windows.
+  - `.src/`: Contains images and resources for the Windows setup guide.
+  
+- **`/linux/`**: Contains scripts and instructions for setting up `ethminer` on Linux.
+  - `README.md`: Overview of Linux-specific configurations.
+  - **`/linux/amd/`**: Contains instructions specific to AMD GPUs on Linux.
+    - `README.md`: Guide for setting up `ethminer` on Linux with AMD GPUs.
+  - **`/linux/nvidia/`**: Contains instructions specific to Nvidia GPUs on Linux.
+    - `README.md`: Guide for setting up `ethminer` on Linux with Nvidia GPUs.
+    - `mining.sh`: Bash script to start mining with Nvidia GPUs on Linux.
 
-The goal is to ensure that `ethminer` restarts if it crashes and that the GPU settings (e.g., overclocking and undervolting) are properly applied to maximize performance and efficiency.
+## Quick Navigation
 
-## Requirements
+Choose your configuration below to access the relevant instructions:
 
-Before you begin, make sure you have:
+- **Windows Setup**
+  - [Windows - Nvidia GPU](./windows/README.md)
+  - [Windows - AMD GPU](./windows/README.md) (Note: Same guide for AMD/Nvidia on Windows)
+  
+- **Linux Setup**
+  - [Linux - Nvidia GPU](./linux/nvidia/README.md)
+  - [Linux - AMD GPU](./linux/amd/README.md)
 
-- A compatible Nvidia or AMD GPU
-- `ethminer` (latest version can be found [here](https://github.com/ethereum-mining/ethminer/releases))
-- (Windows) [MSI Afterburner](https://www.msi.com/Landing/afterburner/graphics-cards) for overclocking and undervolting
-- (Linux) `nvidia-smi` and [GreenWithEnvy (GWE)](https://gitlab.com/leinardi/gwe) for Nvidia GPUs
+## Windows Setup
 
-## Installation and Setup
+The Windows setup guide provides instructions on configuring `ethminer` to start automatically with the operating system. It includes a batch file (`mining.bat`) that sets up MSI Afterburner profiles and restarts `ethminer` if it crashes. Follow the steps below to set up:
+
+1. **Download and extract `ethminer`** from the [releases page](https://github.com/ethereum-mining/ethminer/releases).
+2. **Install MSI Afterburner** to configure GPU settings (overclocking, undervolting).
+3. Configure the **batch script** to set up and start `ethminer` with the correct profile.
+4. Use **Windows Task Scheduler** to run the script with the required privileges.
+
+Refer to the [Windows Setup Guide](./windows/README.md) for detailed steps and images.
+
+## Linux Setup
+
+The Linux setup guide provides separate instructions for Nvidia and AMD GPUs. The `mining.sh` script includes options for configuring GPU power settings and starting `ethminer` automatically on boot.
+
+### Linux Nvidia
+
+Follow the [Linux Nvidia Guide](./linux/nvidia/README.md) for steps to:
+
+1. Download and extract `ethminer`.
+2. Use `nvidia-smi` to set power limits.
+3. Configure GPU settings using [GreenWithEnvy (GWE)](https://gitlab.com/leinardi/gwe).
+4. Create a bash script (`mining.sh`) to automatically start and monitor `ethminer`.
+
+### Linux AMD
+
+Follow the [Linux AMD Guide](./linux/amd/README.md) for steps to:
+
+1. Download and extract `ethminer`.
+2. Configure AMD GPU settings using the command line or tools like `amdgpu-pro`.
+3. Set up a bash script to handle overclocking and start `ethminer`.
+
+## Autostart Configuration
 
 ### Windows
 
-1. **Download Ethminer**: 
-   - Go to the [ethminer releases page](https://github.com/ethereum-mining/ethminer/releases) and download the latest version.
-   - Extract `ethminer.exe` and the `kernels` folder into a directory, e.g., `C:\Ethminer`.
-
-2. **Configure MSI Afterburner**:
-   - Download and install [MSI Afterburner](https://www.msi.com/Landing/afterburner/graphics-cards).
-   - Set up a profile with your desired GPU settings and save it.
-
-3. **Create a Windows Task**:
-   - Open Task Scheduler and create a new task with the following settings:
-     - **Run with highest privileges**.
-     - Set up an action to start MSI Afterburner with the desired profile using arguments like `-Profile1 -m`.
-
-4. **Configure the Batch Script**:
-   - Modify `mining.bat` to include paths and other customizations as needed.
-   - Copy the batch file to the Windows startup folder to ensure it runs on login.
+To set up autostart on Windows, configure the batch script (`mining.bat`) to run on login. This can be done using the startup folder (`shell:startup`) or Task Scheduler.
 
 ### Linux
 
-1. **Download and Install Ethminer**:
-   - Download the latest version of `ethminer` from the [releases page](https://github.com/ethereum-mining/ethminer/releases).
-   - Extract it to a directory, e.g., `/opt/ethminer`.
+For Linux, you can set up autostart using systemd or your window manager's autostart configurations. 
 
-2. **Install Nvidia-smi and GreenWithEnvy**:
-   - Install `nvidia-smi` using your package manager.
-   - Install GreenWithEnvy (GWE) for more control over GPU settings.
-
-3. **Create a Bash Script**:
-   - Use the provided template in `linux/nvidia/mining.sh` to create a bash script that sets GPU power limits, overclocking settings, and starts `ethminer`.
-   - Ensure the script is executable: `sudo chmod +x mining.sh`.
-
-4. **Autostart the Script**:
-   - Configure the script to autostart using options like systemd or your window manager's startup applications.
-
-## Configuration
-
-### GPU Settings
-
-- Adjust GPU settings using tools like MSI Afterburner on Windows or GWE on Linux.
-- Suggested starting points:
-  - **RTX 2070 Super**: Base clock -150, Memory Clock +1000. Achieves ~42MH/s at around 107.5 W power consumption.
-
-### Autostart and Automation
-
-For both Windows and Linux, ensure that the script or batch file is set to run at system boot. This can be done using Task Scheduler on Windows or systemd/autostart scripts on Linux.
+- Use `systemd` to create a service that starts `mining.sh` on boot.
+- If you are using a window manager like i3, add the script to your startup applications.
 
 ## Contributing
 
-We welcome contributions! If you'd like to improve this repository, feel free to open an issue or submit a pull request.
+Contributions are welcome! If you have suggestions or want to improve the documentation, feel free to open an issue or create a pull request.
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This repository is licensed under the MIT License. See the [LICENSE](LICENSE) file for more information.
